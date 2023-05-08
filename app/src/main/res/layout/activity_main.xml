@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_circular_cards_scene1"
+    tools:context=".MainActivity">
+    <FrameLayout
+        android:id="@+id/flImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgBack"
+            android:background="@drawable/backmusic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imgclr"
+            android:background="@color/violet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:text="Choose Your Fav"
+            android:textColor="@color/textclr"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            />
+    </FrameLayout>
+    <View
+        android:id="@+id/guide"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/fbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/black"
+        app:layout_constraintCircle="@+id/guide"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="190dp" >
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/music1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRight1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:layout_constraintCircle="@+id/guide"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="190dp" >
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/music2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLeft1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/purple_500"
+        app:layout_constraintCircle="@+id/guide"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="190dp" >
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/music3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.card.MaterialCardView>
+
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fbtn"
+    android:backgroundTint="@color/purple_700"
+    android:src="@drawable/ic_baseline_remove_red_eye_24"
+    android:layout_margin="10dp"
+    app:borderWidth="0dp"
+    app:tint="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

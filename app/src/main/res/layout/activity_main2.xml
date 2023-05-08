@@ -1,0 +1,205 @@
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blk"
+    tools:ignore="contentDescription"
+    app:layoutDescription="@xml/backup_rules"
+    >
+
+    <FrameLayout
+        android:id="@+id/flImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgBack"
+            android:background="@drawable/music3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imgclr"
+            android:background="@color/violet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/llList"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/textclr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/music1"
+                    />
+
+            <TextView
+                android:id="@+id/tvfav"
+                android:text="@string/red_mixtape_n_click_here"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/textclr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/music2"
+                />
+
+            <TextView
+                android:text="@string/red_mixtape_n_click_here"
+                android:id="@+id/tvtxt2"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/top_image"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/textclr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/music3"
+                />
+
+            <TextView
+                    android:id="@+id/tvName"
+                android:text="@string/red_mixtape_n_click_here"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/imgBottom"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/blk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvsongName"
+            android:layout_weight="1"
+            android:text="Best MixesTape"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llList"
+            app:layout_constraintStart_toEndOf="@+id/imgBottom"/>
+        <LinearLayout
+            android:id="@+id/llbtn"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/tvsongName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                app:tint="@color/white"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_double_arrow_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                app:tint="@color/white"
+                android:layout_gravity="center"
+                android:rotation="180"
+                android:src="@drawable/ic_baseline_pause_circle_filled_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                app:tint="@color/white"
+                android:layout_gravity="center"
+                android:rotation="180"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_baseline_double_arrow_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgfinal"
+        android:src="@drawable/music1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="visible"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/llList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
+
